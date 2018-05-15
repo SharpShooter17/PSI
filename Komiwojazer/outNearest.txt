@@ -1,0 +1,89 @@
+Nodes: 1000
+Nearest Neighbor Distance: 2868.71 Time: 0.062s
+
+Nodes: 2000
+Nearest Neighbor Distance: 4042.63 Time: 0.25s
+
+Nodes: 3000
+Nearest Neighbor Distance: 4828.99 Time: 0.547s
+
+Nodes: 4000
+Nearest Neighbor Distance: 5669.47 Time: 0.998s
+
+Nodes: 5000
+Nearest Neighbor Distance: 6232.31 Time: 1.547s
+
+Nodes: 6000
+Nearest Neighbor Distance: 6807.29 Time: 2.29s
+
+Nodes: 7000
+Nearest Neighbor Distance: 7327.95 Time: 3.11s
+
+Nodes: 8000
+Nearest Neighbor Distance: 7731.82 Time: 4.066s
+
+Nodes: 9000
+Nearest Neighbor Distance: 8087.17 Time: 5.166s
+
+Nodes: 10000
+Nearest Neighbor Distance: 8533.09 Time: 6.161s
+
+Nodes: 11000
+Nearest Neighbor Distance: 8803.43 Time: 7.417s
+
+Nodes: 12000
+Nearest Neighbor Distance: 9126.28 Time: 9.018s
+
+Nodes: 13000
+Nearest Neighbor Distance: 9395 Time: 10.883s
+
+Nodes: 14000
+Nearest Neighbor Distance: 9692.37 Time: 15.077s
+
+Nodes: 15000
+Nearest Neighbor Distance: 9810.1 Time: 14.767s
+
+Nodes: 16000
+Nearest Neighbor Distance: 10113.6 Time: 16.131s
+
+Nodes: 17000
+Nearest Neighbor Distance: 10427.2 Time: 21.778s
+
+Nodes: 18000
+Nearest Neighbor Distance: 10664.6 Time: 21.525s
+
+Nodes: 19000
+Nearest Neighbor Distance: 10748.5 Time: 23.464s
+
+Nodes: 20000
+Nearest Neighbor Distance: 10824.5 Time: 26.052s
+
+Nodes: 21000
+Nearest Neighbor Distance: 10975.9 Time: 28.432s
+
+Nodes: 22000
+Nearest Neighbor Distance: 10988.4 Time: 31.549s
+
+Nodes: 23000
+Nearest Neighbor Distance: 11105.8 Time: 34.167s
+
+Nodes: 24000
+Nearest Neighbor Distance: 11293.2 Time: 37.075s
+
+Nodes: 25000
+Nearest Neighbor Distance: 11334.1 Time: 42.274s
+
+Nodes: 26000
+Nearest Neighbor Distance: 11528.4 Time: 44.525s
+
+Nodes: 27000
+Nearest Neighbor Distance: 11487.7 Time: 47.588s
+
+Nodes: 28000
+Nearest Neighbor Distance: 11519.8 Time: 52.362s
+
+Nodes: 29000
+Nearest Neighbor Distance: 11610.1 Time: 55.752s
+
+Nodes: 30000
+Nearest Neighbor Distance: 11759.1 Time: 57.547s

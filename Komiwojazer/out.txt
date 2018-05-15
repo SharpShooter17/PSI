@@ -1,0 +1,47 @@
+Nodes: 1
+Brute Force Distance: 0 Time: 0s
+Nearest Neighbor Distance: 0 Time: 0s
+
+Nodes: 2
+Brute Force Distance: 12.53 Time: 0s
+Nearest Neighbor Distance: 12.53 Time: 0s
+
+Nodes: 3
+Brute Force Distance: 101.485 Time: 0s
+Nearest Neighbor Distance: 101.485 Time: 0s
+
+Nodes: 4
+Brute Force Distance: 118.515 Time: 0s
+Nearest Neighbor Distance: 118.515 Time: 0s
+
+Nodes: 5
+Brute Force Distance: 129.804 Time: 0s
+Nearest Neighbor Distance: 140.479 Time: 0s
+
+Nodes: 6
+Brute Force Distance: 129.808 Time: 0s
+Nearest Neighbor Distance: 149.422 Time: 0s
+
+Nodes: 7
+Brute Force Distance: 130.831 Time: 0.003s
+Nearest Neighbor Distance: 154.976 Time: 0s
+
+Nodes: 8
+Brute Force Distance: 151.447 Time: 0.027s
+Nearest Neighbor Distance: 176.653 Time: 0s
+
+Nodes: 9
+Brute Force Distance: 153.331 Time: 0.213s
+Nearest Neighbor Distance: 177.774 Time: 0s
+
+Nodes: 10
+Brute Force Distance: 158.978 Time: 1.995s
+Nearest Neighbor Distance: 183.421 Time: 0s
+
+Nodes: 11
+Brute Force Distance: 179.226 Time: 26.338s
+Nearest Neighbor Distance: 204.279 Time: 0s
+
+Nodes: 12
+Brute Force Distance: 219.333 Time: 318.496s
+Nearest Neighbor Distance: 244.385 Time: 0s

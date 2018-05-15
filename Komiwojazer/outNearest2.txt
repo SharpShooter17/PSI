@@ -1,0 +1,26 @@
+Nodes: 10000
+Nearest Neighbor Distance: 8555.35 Time: 6.437s
+
+Nodes: 20000
+Nearest Neighbor Distance: 10814.2 Time: 25.207s
+
+Nodes: 30000
+Nearest Neighbor Distance: 11702.9 Time: 56.58s
+
+Nodes: 40000
+Nearest Neighbor Distance: 11965.7 Time: 101.34s
+
+Nodes: 50000
+Nearest Neighbor Distance: 12145.1 Time: 155.107s
+
+Nodes: 60000
+Nearest Neighbor Distance: 12155.1 Time: 224.528s
+
+Nodes: 70000
+Nearest Neighbor Distance: 12278.8 Time: 318.578s
+
+Nodes: 80000
+Nearest Neighbor Distance: 12196.2 Time: 402.656s
+
+Nodes: 90000
+Nearest Neighbor Distance: 12196.2 Time: 539.978s

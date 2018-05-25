@@ -46,3 +46,8 @@ corka(X, Y) :- rodzic(Y, X), kobieta(X).
 
 brat(X, Z) :- ojciec(Y, X), ojciec(Y, Z), mezczyzna(X).
 siostra(X, Z) :- ojciec(Y, X), ojciec(Y, Z), kobieta(X).
+
+przodek(X, Y) :- rodzic(X, Y).
+przodek(X, Y) :- rodzic(X, Z), przodek(Z, Y).
+
+potomek(X, Y) :- przodek(Y, X).

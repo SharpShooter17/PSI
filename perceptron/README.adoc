@@ -1,0 +1,44 @@
+Bartosz Ujazdowski - 202322
+
+== Modelowanie działania pojedyńczego perceptronu
+
+Zadanie: klasyfikacja dwóch zbiorów liniowo separowalnych na płaszczyźnie kartezjańskiej.
+
+== Funkcja aktywacji
+
+[source, c++]
+include::perceptron.cpp[tags=activationFunction]
+
+== Uczenie
+Perceptor uczy się wykonując następującą metodę: 
+
+[source, c++]
+include::perceptron.cpp[tags=learn]
+
+<1> Jeżeli algorytm nie odpowiedział prawidłowo popraw wagi
+
+== Testowanie
+
+[source, c++]
+include::perceptron.cpp[tags=test]
+
+== Wyniki
+Punkty potrzene do wykonania zadanie generuje losowo w programie metodą rand().
+Funkcja która określa rodzaj punktu (1 lub 0) to: 
+
+[source]
+----
+f(x) = 1.2x + 3
+----
+
+|===
+| l. pkt. do nauki | l. pkt. testowych | l. błędnych odpowiedzi | funkcja perceptronu
+| 8 | 2 | 0 | F(x) = 1.93642x + 0.67
+| 80 | 20 | 1 | F(x) = 1.18918x + 3.34
+| 800 | 200 | 3 |  F(x) = 1.23999x + 2.59
+| 4000 | 1000 | 4 | F(x) = 1.22961x + 4.89
+| 8000 | 2000 | 33 | F(x) = 1.18356x + 2.86
+|===
+
+== Wnioski
+Około 100 punktów do nauki zapewnia dobrą funkcję do określenia rodzaju punktu. 

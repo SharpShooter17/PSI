@@ -47,6 +47,8 @@ corka(X, Y) :- rodzic(Y, X), kobieta(X).
 brat(X, Z) :- ojciec(Y, X), ojciec(Y, Z), mezczyzna(X).
 siostra(X, Z) :- ojciec(Y, X), ojciec(Y, Z), kobieta(X).
 
+rodzenstwo(X, Y) :- rodzic(Z, X), rodzic(Z, Y), mezczyzna(Z).
+
 przodek(X, Y) :- rodzic(X, Y).
 przodek(X, Y) :- rodzic(X, Z), przodek(Z, Y).
 
@@ -54,3 +56,6 @@ potomek(X, Y) :- przodek(Y, X).
 
 ma_dzieci(X) :- potomek(_,X).
 jest_dziadkiem(X) :- potomek(Y,X), potomek(_, Y), mezczyzna(X).
+
+ciocia(X, Y) :- kobieta(X), rodzenstwo(X, Z), potomek(Y, Z).
+wuj(X, Y) :- mezczyzna(X), rodzenstwo(X, Z), potomek(Y, Z).

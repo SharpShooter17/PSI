@@ -54,16 +54,14 @@ double distance(std::vector<City> const c)
 	}
 	return result;
 }
-
+// tag::nearestNeighbor[]
 void nearestNeighbor(std::vector<City> c)
 {
 	City actual = c[0];
 	c.erase(c.begin());
 	std::vector<City> result;
 	result.push_back(actual);
-	
 	std::clock_t t = std::clock();
-	
 	while(!c.empty())
 	{
 		int min = 0;
@@ -78,19 +76,17 @@ void nearestNeighbor(std::vector<City> c)
 		actual = c[min];
 		c.erase(c.begin() + min);
 	}
-	
 	t = std::clock() - t;
-	
 	std::cout << "Nearest Neighbor Distance: " << distance(result) << " Time: " << ((double)t)/CLOCKS_PER_SEC << "s" << std::endl;
 }
+// end::nearestNeighbor[]
 
+// tag::bruteForce[]
 void bruteForce(std::vector<City> c)
 {
 	std::vector<City> result = c;
 	double minDistance = distance(c);
-	
 	std::clock_t t = std::clock();
-	
 	while(std::next_permutation(c.begin(), c.end()) )
 	{
 		double dist = distance(c);
@@ -100,11 +96,10 @@ void bruteForce(std::vector<City> c)
 			result = c;
 		}
 	}
-	
 	t = std::clock() - t;
-	
 	std::cout << "Brute Force Distance: " << distance(result) << " Time: " << ((double)t)/CLOCKS_PER_SEC << "s" << std::endl;
 }
+// end::bruteForce[]
 
 int main(int argc, char ** argv)
 {

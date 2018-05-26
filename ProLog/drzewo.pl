@@ -51,3 +51,6 @@ przodek(X, Y) :- rodzic(X, Y).
 przodek(X, Y) :- rodzic(X, Z), przodek(Z, Y).
 
 potomek(X, Y) :- przodek(Y, X).
+
+ma_dzieci(X) :- potomek(_,X).
+jest_dziadkiem(X) :- potomek(Y,X), potomek(_, Y), mezczyzna(X).

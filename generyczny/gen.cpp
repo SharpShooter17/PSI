@@ -59,12 +59,16 @@ int adaptation(const population_t & p)
 	return 2 * ( (int)p.x * (int)p.x + 1);
 }
 
-int main()
+int main(int argc, char * argv[])
 {
-	const int N = 10;
-	const int era = 100;
-	const int crossing_probability = 85;
-	const int mutation_probability = 20;
+	if (argc < 5)
+	{
+		std::cout << "Using: " << argv[0] << " [population] [era] [crossing probability] [mutation probability]" << std::endl;
+	}
+	const int N = atoi(argv[1]);
+	const int era = atoi(argv[2]);
+	const int crossing_probability = atoi(argv[3]);
+	const int mutation_probability = atoi(argv[4]);
 	
 	std::vector<population_t> population;
 	//Generowanie populacji pocz¹tkowej

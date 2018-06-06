@@ -1,2 +1,25 @@
 Bartosz Ujazdowski - 202322
+
 == Algorytm Genetyczny
+W ćwiczeniu zajmiemy się optymalizacją funkcji 2(x^2 + 1) na przedziale <0,127> za pomocą algorytmu genetycznego.
+Naszymi operatorami będą krzyżowanie i mutacja. 
+Krzyżowanie będzie realizowane przez zamianę części wokół losowo wybranego lokusa. 
+Mutacja zmienia losowo wartość bitowej reprezentacji chromosomu(jego genotypu).
+Zmiennymi którymi będziemy manipulować by dostroić algorytm będą:
+
+* Prawdopodobieństwo krzyżowania
+* Prawdopodobieństwo mutacji
+* Wielkość populacji
+* Ilość iteracji
+
+== Wyniki
+Napisano program implementujący podstawowy algorytm genetyczny z selekcją opartą na metodzie ruletki. 
+Uruchamiano program z różnymi wartościami wcześniej wymienionych parametrów.
+
+|===
+| Wielkość populacji | 10 | 10 | 10 | 20 | 20 | 20 
+| Prawdopodobieństwo krzyżowania | 70% | 80% | 90% | 70% | 80% | 90%
+| Prawdopodobieństwo mutacji | 5% | 10% | 15% | 5% | 10% | 15%
+| Ilość iteracji | 20 | 50 | 100 | 20 | 50 | 100
+| Wynik | 81 | 107 | 114 | 111 | 123 | 127
+|===

@@ -1,0 +1,19 @@
+Bartosz Ujazdowski - 202322
+
+== Programowanie systemów eksperckich 
+
+== Zależności rodzinne
+
+=== Baza faktów: 
+[source]
+include::drzewo.pl[tags=bazaFaktow]
+
+=== Reguły opisujące stopnie pokrewieństwa
+[source]
+include::drzewo.pl[tags=pokrewienstwo]
+
+=== Dodatkowe reguły
+[source]
+include::drzewo.pl[tags=pkt4]
+
+== Sport

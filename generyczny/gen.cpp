@@ -3,6 +3,7 @@
  */
  
 #include <iostream>
+#include <vector>
 #include <stdlib.h>
 #include <time.h>
 
@@ -61,14 +62,18 @@ int adaptation(const population_t & p)
 int main()
 {
 	const int N = 10;
-	const int era = 100000;
+	const int era = 100;
+	const int crossing_probability = 85;
+	const int mutation_probability = 20;
 	
-	population_t population[N];
+	std::vector<population_t> population;
 	//Generowanie populacji pocz¹tkowej
 	srand(time(NULL));
 	for (int i = 0; i < N; i++)
 	{
-		population[i].x = rand() % 128;
+		population_t p;
+		p.x = rand() % 128;
+		population.push_back(p);
 		show_population(population[i]);
 	}	
 	
@@ -89,7 +94,7 @@ int main()
 			probability[i] = (double)adapt[i] / (double)sumOfAdaptaion * 100.0;
 		}
 		//kolo ruletki 
-		population_t next_population[N];
+		std::vector<population_t> next_population;
 		for (int i = 0; i < N; i++)
 		{
 			double r = (rand() % 10000) / 100.0;
@@ -99,22 +104,39 @@ int main()
 				sum += probability[j];
 				if ( sum >= r )
 				{
-					next_population[i] = population[j];
+					next_population.push_back(population[j]);
 					break;
 				}
 			}
 		}
 		//krzy¿owanie
 		for (int i = 0; i < N; i += 2)
-		{
-			int locus = (rand() % 8) + 1;
-			population[i] = cross(next_population[i], next_population[i+1], locus);			
-			population[i + 1] = cross(next_population[i + 1], next_population[i], locus);
+		{		
+			int index = rand() % next_population.size();
+			population_t p1 = next_population[index];
+			next_population.erase(next_population.begin() + index);
+			index = rand() % next_population.size();
+			population_t p2 = next_population[index];
+			next_population.erase(next_population.begin() + index);
+			
+			if ( rand() % 101 > crossing_probability)
+			{
+				population[i] = p1;	
+				population[i + 1] = p2;
+			} else 
+			{			
+				int locus = (rand() % 8) + 1;
+				population[i] = cross(p1, p2, locus);			
+				population[i + 1] = cross(p2, p1, locus);
+			}
 		}
 		//mutacja
 		for ( int i = 0; i < N; i++ )
 		{
-			mutation(population[i], (rand() % 8) + 1);
+			if (rand() % 101 <= mutation_probability)
+			{
+				mutation(population[i], (rand() % 8) + 1);
+			}
 		}
 	}
 	

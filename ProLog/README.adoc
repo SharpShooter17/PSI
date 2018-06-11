@@ -17,3 +17,11 @@ include::drzewo.pl[tags=pokrewienstwo]
 include::drzewo.pl[tags=pkt4]
 
 == Sport
+
+=== Baza faktów
+[source]
+include::sport.pl[tags=bazaFaktow]
+
+=== Reguły
+[source]
+include::sport.pl[tags=reguly]

@@ -28,6 +28,7 @@ void show_population(const population_t & p)
 	std::cout << (int)p.x << "\t" << (int)p.x1 << (int)p.x2 << (int)p.x3 << (int)p.x4 << (int)p.x5 <<(int)p.x6 << (int)p.x7 <<(int)p.x8 << std::endl;
 }
 
+// tag::cross[]
 population_t cross( population_t p1, population_t p2, int locus )
 {
 	p1.x = p1.x << 8 - locus;
@@ -37,7 +38,8 @@ population_t cross( population_t p1, population_t p2, int locus )
 	p1.x = p1.x | p2.x;
 	return p1;
 }
-
+// end::cross[]
+// tag::mutationFunc[]
 population_t mutation(const population_t & population, int locus)
 {
 	population_t p = population;
@@ -53,6 +55,7 @@ population_t mutation(const population_t & population, int locus)
     p.x = p.x ^ population.x;
 	return p;
 }
+// end::mutationFunc[]
 
 int adaptation(const population_t & p)
 {
@@ -83,7 +86,7 @@ int main(int argc, char * argv[])
 	
 	for (int e = 0; e < era; e++)
 	{
-		//Selekcja
+		// tag::selection[]
 		int adapt[N];
 		int sumOfAdaptaion = 0;
 		for (int i = 0; i < N; i++)
@@ -91,15 +94,13 @@ int main(int argc, char * argv[])
 			adapt[i] = adaptation(population[i]);
 			sumOfAdaptaion += adapt[i];
 		}
-		//prawdopodobieñstwo selekcji
 		double probability[N];
 		for(int i = 0; i < N; i++)
 		{
-			probability[i] = (double)adapt[i] / (double)sumOfAdaptaion * 100.0;
+			probability[i] = (double)adapt[i] / (double)sumOfAdaptaion * 100.0; // <1>
 		}
-		//kolo ruletki 
 		std::vector<population_t> next_population;
-		for (int i = 0; i < N; i++)
+		for (int i = 0; i < N; i++)						// <2> 
 		{
 			double r = (rand() % 10000) / 100.0;
 			double sum = 0.0;
@@ -113,7 +114,9 @@ int main(int argc, char * argv[])
 				}
 			}
 		}
+		// end::selection[]
 		//krzy¿owanie
+		// tag::crossing[]
 		for (int i = 0; i < N; i += 2)
 		{		
 			int index = rand() % next_population.size();
@@ -122,7 +125,6 @@ int main(int argc, char * argv[])
 			index = rand() % next_population.size();
 			population_t p2 = next_population[index];
 			next_population.erase(next_population.begin() + index);
-			
 			if ( rand() % 101 > crossing_probability)
 			{
 				population[i] = p1;	
@@ -134,7 +136,8 @@ int main(int argc, char * argv[])
 				population[i + 1] = cross(p2, p1, locus);
 			}
 		}
-		//mutacja
+		// end::crossing[]
+		// tag::mutation[]
 		for ( int i = 0; i < N; i++ )
 		{
 			if (rand() % 101 <= mutation_probability)
@@ -142,6 +145,7 @@ int main(int argc, char * argv[])
 				mutation(population[i], (rand() % 8) + 1);
 			}
 		}
+		// end::mutation[]
 	}
 	
 	std::cout << "-----------------------\n";

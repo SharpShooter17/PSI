@@ -1,5 +1,29 @@
 Bartosz Ujazdowski - 202322
 
+== Algorytmy
+=== Selekcja
+[source, c++]
+include::gen.cpp[tags=selection]
+
+<1> Prawdopodobieństwo selekcji
+<2> Algorytm ruletki
+
+=== Krzyżowanie
+[source, c++]
+include::gen.cpp[tags=crossing]
+
+=== Funkcja Cross
+[source, c++]
+include::gen.cpp[tags=cross]
+
+=== Mutacja
+[source, c++]
+include::gen.cpp[tags=mutation]
+
+=== Funkcja mutation
+[source, c++]
+include::gen.cpp[tags=mutationFunc]
+
 == Algorytm Genetyczny
 W ćwiczeniu zajmiemy się optymalizacją funkcji 2(x^2 + 1) na przedziale <0,127> za pomocą algorytmu genetycznego.
 Naszymi operatorami będą krzyżowanie i mutacja. 
@@ -13,9 +37,6 @@ Zmiennymi którymi będziemy manipulować by dostroić algorytm będą:
 * Ilość iteracji
 
 == Wyniki
-Napisano program implementujący podstawowy algorytm genetyczny z selekcją opartą na metodzie ruletki. 
-Uruchamiano program z różnymi wartościami wcześniej wymienionych parametrów.
-
 |===
 | Wielkość populacji | 10 | 10 | 10 | 20 | 20 | 20 
 | Prawdopodobieństwo krzyżowania | 70% | 80% | 90% | 70% | 80% | 90%
